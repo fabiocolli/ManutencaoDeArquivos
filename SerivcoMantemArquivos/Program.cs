@@ -9,7 +9,7 @@ namespace SerivcoMantemArquivos
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new SerivcoMantemArquivos()
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace SerivcoMantemArquivos
 {
-    public partial class Service1 : ServiceBase
+    public partial class SerivcoMantemArquivos : ServiceBase
     {
-        public Service1()
+        public SerivcoMantemArquivos()
         {
             InitializeComponent();
         }

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AplicacaoManutencaoServico\AplicacaoManutencaoServico.csproj" />
     <ProjectReference Include="..\SerivcoMantemArquivos\ServicoMantemArquivos.csproj" />
   </ItemGroup>
 

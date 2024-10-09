@@ -1,6 +1,6 @@
 ﻿namespace SerivcoMantemArquivos
 {
-    partial class Service1
+    partial class SerivcoMantemArquivos
     {
         /// <summary> 
         /// Variável de designer necessária.
