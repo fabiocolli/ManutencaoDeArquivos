@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcluirArquivo.cs" />
     <Compile Include="ServicoMantemArquivo.cs">
       <SubType>Component</SubType>
     </Compile>

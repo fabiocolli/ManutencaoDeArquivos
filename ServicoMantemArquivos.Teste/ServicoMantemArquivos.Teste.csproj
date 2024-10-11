@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AplicacaoManutencaoServico\AplicacaoManutencaoServico.csproj" />
+    <ProjectReference Include="..\DominioManutencaoArquivos\DominioManutencaoArquivos.csproj" />
     <ProjectReference Include="..\SerivcoMantemArquivos\ServicoMantemArquivos.csproj" />
   </ItemGroup>
 
