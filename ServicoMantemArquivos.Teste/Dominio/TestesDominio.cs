@@ -8,14 +8,14 @@ namespace ServicoMantemArquivos.Teste.Dominio
         [Fact(DisplayName = "A classe Arquivo deve ser criada com os parâmetros obrigatórios")]
         public void Arquivo_DeveSerCriadoComParametrosObrigatorios()
         {
-            // Arrange
+            // Arranjo
             var caminho = "C:\\temp\\arquivo.txt";
             var dataDeCriacao = DateTime.Now;
 
-            // Act
+            // Ação
             var arquivo = new Arquivo(caminho, dataDeCriacao);
 
-            // Assert
+            // Assertiva
             arquivo.Caminho.Should().Be(caminho);
             arquivo.DataDeCriacao.Should().Be(dataDeCriacao);
         }
