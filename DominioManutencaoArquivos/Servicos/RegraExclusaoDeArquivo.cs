@@ -5,9 +5,9 @@ namespace Dominio.ManutencaoArquivos.Servicos
 {
     public class RegraExclusaoDeArquivo : IRegraExclusaoDeArquivo
     {
-        public bool PodeExcluirArquivo(Arquivo arquivo, int idadeDoArquivo)
+        public void MarcarArquivoQuePodeSerExcluido(Arquivo arquivo, int periodoParaExclusao)
         {
-            throw new NotImplementedException();
+            arquivo.PodeExcluir = arquivo.DataDeCriacao.AddDays(periodoParaExclusao) < DateTime.Now;
         }
     }
 }

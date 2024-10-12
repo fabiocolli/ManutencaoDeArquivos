@@ -4,6 +4,6 @@ namespace Dominio.ManutencaoArquivos.Interface
 {
     public interface IRegraExclusaoDeArquivo
     {
-        bool PodeExcluirArquivo(Arquivo arquivo, int idadeDoArquivo);
+        void MarcarArquivoQuePodeSerExcluido(Arquivo arquivo, int periodoParaExclusao);
     }
 }

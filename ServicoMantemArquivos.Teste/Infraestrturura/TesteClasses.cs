@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using Dominio.ManutencaoArquivos.Entidades;
+using FluentAssertions;
 using Infraestrutura.ManutencaoArquivos.Classes;
 using Infraestrutura.ManutencaoArquivos.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -125,6 +126,24 @@ namespace ServicoMantemArquivos.Teste.Infraestrturura
             // Assertiva
             pastasRaizes.Should().NotBeNull();
             pastasRaizes.Should().BeOfType<List<string>>();
+        }
+
+        [Fact(DisplayName = "A classe ServicoArquivosDeSistema precisa retornar uma lista de arquivos basedo na configuração de pastas")]
+        public void AClasseServicoArquivosDeSistemaPrecisaRetornarUmaListaDeArquivosBaseadoNaConfiguracaoDePastas()
+        {
+            // Arranjo
+            var servicoArquivosDeSistema = new ServicoArquivosDeSistema();
+            var configuracao = new Configuracao
+            {
+                PastasRaizes = new List<string> { "C:\\temp" }
+            };
+
+            // Ação
+            var arquivos = servicoArquivosDeSistema.ObterArquivosDasPastas(configuracao);
+
+            // Assertiva
+            arquivos.Should().NotBeNull();
+            arquivos.Should().BeOfType<List<Arquivo>>();
         }
     }
 }

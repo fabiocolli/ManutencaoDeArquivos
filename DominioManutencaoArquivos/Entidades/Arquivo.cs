@@ -1,4 +1,6 @@
-﻿namespace Dominio.ManutencaoArquivos.Entidades
+﻿using Dominio.ManutencaoArquivos.Servicos;
+
+namespace Dominio.ManutencaoArquivos.Entidades
 {
     public class Arquivo
     {
@@ -15,7 +17,7 @@
         public string Caminho { get; }
 
         public DateTime DataDeCriacao { get; }
-
+        public string Nome { get; }
         public bool PodeExcluir { get; set; }
     }
 }
