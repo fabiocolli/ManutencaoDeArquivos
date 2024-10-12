@@ -10,7 +10,7 @@ namespace ServicoMantemArquivos.Teste.Dominio
         public void AClasseRegraExclusaoDeArquivoServiceDeveExistir()
         {
             // Arranjo
-            var servicoExclusao = typeof(ServicoDeRegraExclusaoDeArquivo);
+            var servicoExclusao = typeof(RegraExclusaoDeArquivo);
 
             // Ação
             var servico = servicoExclusao;
@@ -23,7 +23,7 @@ namespace ServicoMantemArquivos.Teste.Dominio
         public void AClasseRegraExclusaoDeArquivoServiceDeveImplementarInterfaceIRegraExclusaoDeArquivo()
         {
             // Arranjo
-            var servicoExclusao = typeof(ServicoDeRegraExclusaoDeArquivo);
+            var servicoExclusao = typeof(RegraExclusaoDeArquivo);
             var interfaceRegraExclusao = typeof(IRegraExclusaoDeArquivo);
 
             // Ação

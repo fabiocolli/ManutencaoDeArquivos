@@ -15,5 +15,7 @@
         public string Caminho { get; }
 
         public DateTime DataDeCriacao { get; }
+
+        public bool PodeExcluir { get; set; }
     }
 }

@@ -32,5 +32,59 @@ namespace ServicoMantemArquivos.Teste.Infraestrturura
         }
 
         [Fact(DisplayName = "A interface de IServicoDeConfiguracao deve ter o método de ObterConfiguracoes")]
+        public void AInterfaceIServicoDeConfiguracaoDeveTerMetodoObterConfiguracoes()
+        {
+            // Arranjo
+            var configuracaoService = typeof(IServicoDeConfiguracao);
+            var metodoObterConfiguracoes = "ObterConfiguracoes";
+
+            // Ação
+            var metodos = configuracaoService.GetMethods().Select(m => m.Name);
+
+            // Assertiva
+            metodos.Should().Contain(metodoObterConfiguracoes);
+        }
+
+        [Fact(DisplayName = "A interface de IServicoArquivoDeSistema deve ter o método de ObterArquivos das pastas")]
+        public void AInterfaceIServicoArquivoDeSistemaDeveTerMetodoObterArquivosDasPastas()
+        {
+            // Arranjo
+            var servicoArquivoDeSistema = typeof(IServicoArquivoDeSistema);
+            var metodoObterArquivosDasPastas = "ObterArquivosDasPastas";
+
+            // Ação
+            var metodos = servicoArquivoDeSistema.GetMethods().Select(m => m.Name);
+
+            // Assertiva
+            metodos.Should().Contain(metodoObterArquivosDasPastas);
+        }
+
+        [Fact(DisplayName = "A interface de IServicoArquivoDeSistema deve ter o método de Excluir arquivo")]
+        public void AInterfaceIServicoArquivoDeSistemaDeveTerMetodoExcluirArquivo()
+        {
+            // Arranjo
+            var servicoArquivoDeSistema = typeof(IServicoArquivoDeSistema);
+            var metodoExcluirArquivo = "ExcluirArquivo";
+
+            // Ação
+            var metodos = servicoArquivoDeSistema.GetMethods().Select(m => m.Name);
+
+            // Assertiva
+            metodos.Should().Contain(metodoExcluirArquivo);
+        }
+
+        [Fact(DisplayName = "A interface de IServicoDeConfiguracao deve ter o método ObterConfiguracoes que tem um parâmetro do tipo ConfigurationBuilder")]
+        public void AInterfaceIServicoDeConfiguracaoDeveTerMetodoObterConfiguracoesComParametroConfigurationBuilder()
+        {
+            // Arranjo
+            var configuracaoService = typeof(IServicoDeConfiguracao);
+            var parametroConfigurationBuilder = "IConfigurationRoot";
+
+            // Ação
+            var parametros = configuracaoService.GetMethods().SelectMany(m => m.GetParameters()).Select(p => p.ParameterType.Name);
+
+            // Assertiva
+            parametros.Should().Contain(parametroConfigurationBuilder);
+        }
     }
 }

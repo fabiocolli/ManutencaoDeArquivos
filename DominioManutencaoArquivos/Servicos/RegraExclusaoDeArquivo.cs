@@ -3,7 +3,7 @@ using Dominio.ManutencaoArquivos.Interface;
 
 namespace Dominio.ManutencaoArquivos.Servicos
 {
-    public class ServicoDeRegraExclusaoDeArquivo : IRegraExclusaoDeArquivo
+    public class RegraExclusaoDeArquivo : IRegraExclusaoDeArquivo
     {
         public bool PodeExcluirArquivo(Arquivo arquivo, int idadeDoArquivo)
         {

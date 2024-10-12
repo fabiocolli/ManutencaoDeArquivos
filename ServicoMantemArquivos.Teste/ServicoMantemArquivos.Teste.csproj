@@ -21,7 +21,6 @@
     <ProjectReference Include="..\AplicacaoManutencaoServico\Aplicacao.ManutencaoDeArquivo.csproj" />
     <ProjectReference Include="..\DominioManutencaoArquivos\Dominio.ManutencaoArquivos.csproj" />
     <ProjectReference Include="..\Infraestrutura.ManutencaoArquivos\Infraestrutura.ManutencaoArquivos.csproj" />
-    <ProjectReference Include="..\SerivcoMantemArquivos\ServicoMantemArquivos.csproj" />
   </ItemGroup>
 
   <ItemGroup>

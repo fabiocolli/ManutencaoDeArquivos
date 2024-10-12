@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - ServicoWindows", "03 - ServicoWindows", "{205584AA-8E7B-44D9-86D9-65F6E46FD3BB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Testes", "05 - Testes", "{16B71D1B-DD88-4377-A610-9BF3D58D2699}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoMantemArquivos", "SerivcoMantemArquivos\ServicoMantemArquivos.csproj", "{D22C8029-4B73-41B6-9858-AFB3121D87D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicoMantemArquivos.Teste", "ServicoMantemArquivos.Teste\ServicoMantemArquivos.Teste.csproj", "{D1D3377F-6C54-48E7-B2CE-1C3A8B0ABE6F}"
 EndProject
@@ -23,16 +19,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dominio.ManutencaoArquivos"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura.ManutencaoArquivos", "Infraestrutura.ManutencaoArquivos\Infraestrutura.ManutencaoArquivos.csproj", "{DD552F93-76D0-4F13-9B4F-1DF2EA7CC8CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - ServicoWindows", "03 - ServicoWindows", "{C9B8526A-95B7-48B3-AEB0-7B4B83EC07ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico.ManutencaoArquivos", "WorkerService1\Servico.ManutencaoArquivos.csproj", "{08670D8F-E152-46ED-B732-8594B1504503}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D22C8029-4B73-41B6-9858-AFB3121D87D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D22C8029-4B73-41B6-9858-AFB3121D87D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D22C8029-4B73-41B6-9858-AFB3121D87D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D22C8029-4B73-41B6-9858-AFB3121D87D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D1D3377F-6C54-48E7-B2CE-1C3A8B0ABE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1D3377F-6C54-48E7-B2CE-1C3A8B0ABE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1D3377F-6C54-48E7-B2CE-1C3A8B0ABE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,16 +45,20 @@ Global
 		{DD552F93-76D0-4F13-9B4F-1DF2EA7CC8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD552F93-76D0-4F13-9B4F-1DF2EA7CC8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD552F93-76D0-4F13-9B4F-1DF2EA7CC8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08670D8F-E152-46ED-B732-8594B1504503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08670D8F-E152-46ED-B732-8594B1504503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08670D8F-E152-46ED-B732-8594B1504503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08670D8F-E152-46ED-B732-8594B1504503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D22C8029-4B73-41B6-9858-AFB3121D87D8} = {205584AA-8E7B-44D9-86D9-65F6E46FD3BB}
 		{D1D3377F-6C54-48E7-B2CE-1C3A8B0ABE6F} = {16B71D1B-DD88-4377-A610-9BF3D58D2699}
 		{5BCA780D-7E13-413B-B422-C055D8DC2AD4} = {749A9D2A-B230-4A9D-81B3-EF3D0BDFEBD1}
 		{17BF4723-7025-4486-BE44-9B5776B52298} = {9384588B-2CB5-42A6-A5DA-36E31577879C}
 		{DD552F93-76D0-4F13-9B4F-1DF2EA7CC8CA} = {230C45A2-FA34-4D3F-9814-9609A962E72E}
+		{08670D8F-E152-46ED-B732-8594B1504503} = {C9B8526A-95B7-48B3-AEB0-7B4B83EC07ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B818D30D-9995-493E-9CDD-19A4D08C9436}
