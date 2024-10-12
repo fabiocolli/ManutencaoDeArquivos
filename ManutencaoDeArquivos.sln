@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura.ManutencaoAr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - ServicoWindows", "03 - ServicoWindows", "{C9B8526A-95B7-48B3-AEB0-7B4B83EC07ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico.ManutencaoArquivos", "WorkerService1\Servico.ManutencaoArquivos.csproj", "{08670D8F-E152-46ED-B732-8594B1504503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico.ManutencaoArquivos", "Servico.ManutencaoArquivos\Servico.ManutencaoArquivos.csproj", "{08670D8F-E152-46ED-B732-8594B1504503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
