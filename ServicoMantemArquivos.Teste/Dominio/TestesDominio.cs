@@ -1,9 +1,6 @@
 ﻿using Dominio.ManutencaoArquivos.Entidades;
-using Dominio.ManutencaoArquivos.Interface;
 using Dominio.ManutencaoArquivos.Servicos;
 using FluentAssertions;
-using Infraestrutura.ManutencaoArquivos.Interfaces;
-using Moq;
 
 namespace ServicoMantemArquivos.Teste.Dominio
 {

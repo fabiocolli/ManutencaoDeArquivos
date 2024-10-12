@@ -1,6 +1,7 @@
 ﻿using Aplicacao.ManutencaoDeArquivo.Interfaces;
 using Dominio.ManutencaoArquivos.Interface;
 using Infraestrutura.ManutencaoArquivos.Interfaces;
+using Microsoft.Extensions.Configuration;
 
 namespace Aplicacao.ManutencaoDeArquivo.Servico
 {
@@ -17,9 +18,16 @@ namespace Aplicacao.ManutencaoDeArquivo.Servico
             _servicoArquivoDeSistema = servicoArquivoDeSistema;
         }
 
-        public void ExcluirArquivosAntigos()
+        public async void ExcluirArquivosAntigos(IConfigurationRoot configuracao)
         {
-            throw new NotImplementedException();
+            var configuracoesDoAppSettings = _configuracaoService.ObterConfiguracoes(configuracao);
+
+            var arquivos = _servicoArquivoDeSistema.ObterArquivosDasPastas(configuracoesDoAppSettings);
+
+            foreach (var arquivo in arquivos)
+            {
+                _servicoArquivoDeSistema.ExcluirArquivo(arquivo);
+            }
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Dominio.ManutencaoArquivos.Servicos;
-
-namespace Dominio.ManutencaoArquivos.Entidades
+﻿namespace Dominio.ManutencaoArquivos.Entidades
 {
     public class Arquivo
     {

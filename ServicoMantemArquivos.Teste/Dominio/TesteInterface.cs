@@ -16,45 +16,34 @@ namespace ServicoMantemArquivos.Teste.Dominio
             interfaceRegraExclusaoArquivo.Should().NotBeNull();
         }
 
-        [Fact(DisplayName = "A Interface IRegraExcluirArquivo deve ter um método PodeExcluirArquivo")]
+        [Fact(DisplayName = "A Interface IRegraExcluirArquivo deve ter um método MarcarArquivoQuePodeSerExcluido")]
         public void AInterfaceExcluirArquivoDeveTerMetodoPodeExcluirArquivo()
         {
             //Arranjo
             var interfaceRegraExclusaoArquivo = typeof(IRegraExclusaoDeArquivo);
-            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("PodeExcluirArquivo");
+            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("MarcarArquivoQuePodeSerExcluido");
 
             //Assertiva
             metodoPodeExcluirArquivo.Should().NotBeNull();
         }
 
-        [Fact(DisplayName = "O método PodeExcluirArquivo da Interface IRegraExcluirArquivo deve retornar um booleano")]
-        public void MetodoPodeExcluirArquivoDeveRetornarBooleano()
-        {
-            //Arranjo
-            var interfaceRegraExclusaoArquivo = typeof(IRegraExclusaoDeArquivo);
-            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("PodeExcluirArquivo");
-
-            //Assertiva
-            metodoPodeExcluirArquivo.ReturnType.Should().Be(typeof(bool));
-        }
-
-        [Fact(DisplayName = "O método PodeExcluirArquivo da Interface IRegraExcluirArquivo deve ser dois parâmetros")]
+        [Fact(DisplayName = "O método MarcarArquivoQuePodeSerExcluido da Interface IRegraExcluirArquivo deve ser dois parâmetros")]
         public void MetodoPodeExcluirArquivoDeveTerDoisParametros()
         {
             //Arranjo
             var interfaceRegraExclusaoArquivo = typeof(IRegraExclusaoDeArquivo);
-            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("PodeExcluirArquivo");
+            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("MarcarArquivoQuePodeSerExcluido");
 
             //Assertiva
             metodoPodeExcluirArquivo.GetParameters().Should().HaveCount(2);
         }
 
-        [Fact(DisplayName = "O primeiro parâmetro do método PodeExcluirArquivo da Interface IRegraExcluirArquivo deve ser do tipo Arquivo e do tipo int")]
+        [Fact(DisplayName = "O primeiro parâmetro do método MarcarArquivoQuePodeSerExcluido da Interface IRegraExcluirArquivo deve ser do tipo Arquivo e do tipo int")]
         public void PrimeiroParametroMetodoPodeExcluirArquivoDeveSerArquivoEInt()
         {
             //Arranjo
             var interfaceRegraExclusaoArquivo = typeof(IRegraExclusaoDeArquivo);
-            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("PodeExcluirArquivo");
+            var metodoPodeExcluirArquivo = interfaceRegraExclusaoArquivo.GetMethod("MarcarArquivoQuePodeSerExcluido");
 
             //Assertiva
             metodoPodeExcluirArquivo.GetParameters()[0].ParameterType.Should().Be(typeof(Arquivo));

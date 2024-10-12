@@ -1,8 +1,10 @@
 ﻿using Dominio.ManutencaoArquivos.Entidades;
+using Dominio.ManutencaoArquivos.Interface;
 using FluentAssertions;
 using Infraestrutura.ManutencaoArquivos.Classes;
 using Infraestrutura.ManutencaoArquivos.Interfaces;
 using Microsoft.Extensions.Configuration;
+using Moq;
 using System.Reflection;
 
 namespace ServicoMantemArquivos.Teste.Infraestrturura
@@ -132,7 +134,8 @@ namespace ServicoMantemArquivos.Teste.Infraestrturura
         public void AClasseServicoArquivosDeSistemaPrecisaRetornarUmaListaDeArquivosBaseadoNaConfiguracaoDePastas()
         {
             // Arranjo
-            var servicoArquivosDeSistema = new ServicoArquivosDeSistema();
+            var regraDeExcluao = new Mock<IRegraExclusaoDeArquivo>();
+            var servicoArquivosDeSistema = new ServicoArquivosDeSistema(regraDeExcluao.Object);
             var configuracao = new Configuracao
             {
                 PastasRaizes = new List<string> { "C:\\temp" }
@@ -144,6 +147,20 @@ namespace ServicoMantemArquivos.Teste.Infraestrturura
             // Assertiva
             arquivos.Should().NotBeNull();
             arquivos.Should().BeOfType<List<Arquivo>>();
+        }
+
+        [Fact(DisplayName = "O Método ExcluirArquivo da classe ServicoArquivosDeSistema precisa excluir um arquivo no HD")]
+        public void OMétodoExcluirArquivoDaClasseServicoArquivosDeSistemaPrecisaExcluirUmArquivoNoHD()
+        {
+            // Arranjo
+            var servicoArquivosDeSistema = new ServicoArquivosDeSistema();
+            var arquivo = new Arquivo("C:\\temp\\arquivo.txt", DateTime.Now);
+
+            // Ação
+            var resultado = servicoArquivosDeSistema.ExcluirArquivo(arquivo);
+
+            // Assertiva
+            resultado.Should().BeTrue();
         }
     }
 }

@@ -8,14 +8,14 @@ namespace Infraestrutura.ManutencaoArquivos.Classes
         public Configuracao ObterConfiguracoes(IConfigurationRoot configuiracoes)
         {
             var pastasRaizes = configuiracoes.GetSection("Configuracoes:PastasRaizes");
-            var periodoConfiguradoEmSegundos = configuiracoes.GetSection("Configuracoes:PeriodoConfiguradoEmSegundos");
+            var PeriodoConfiguradoEmDias = configuiracoes.GetSection("Configuracoes:PeriodoConfiguradoEmDias");
             int periodoDeTempoPermanenciaDoArquivo = 0;
 
             return new Configuracao
             {
                 PastasRaizes = SplitPastasRaizes(pastasRaizes.Value),
                 PeriodoDeTempoPermanenciaDoArquivo =
-                int.TryParse(periodoConfiguradoEmSegundos?.Value, out periodoDeTempoPermanenciaDoArquivo)
+                int.TryParse(PeriodoConfiguradoEmDias?.Value, out periodoDeTempoPermanenciaDoArquivo)
                     ? periodoDeTempoPermanenciaDoArquivo : 1
             };
         }
@@ -25,6 +25,8 @@ namespace Infraestrutura.ManutencaoArquivos.Classes
             List<string> pastas = new List<string>();
 
             pastas.AddRange(pastasRaizes?.Split(";") ?? Array.Empty<string>());
+
+            pastas.RemoveAll(pasta => string.IsNullOrWhiteSpace(pasta) || !Directory.Exists(pasta));
 
             return pastas;
         }
