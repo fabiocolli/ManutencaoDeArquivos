@@ -18,7 +18,7 @@ namespace Aplicacao.ManutencaoDeArquivo.Servico
             _servicoArquivoDeSistema = servicoArquivoDeSistema;
         }
 
-        public async void ExcluirArquivosAntigos(IConfigurationRoot configuracao)
+        public void ExcluirArquivosAntigos(IConfigurationRoot configuracao)
         {
             var configuracoesDoAppSettings = _configuracaoService.ObterConfiguracoes(configuracao);
 
