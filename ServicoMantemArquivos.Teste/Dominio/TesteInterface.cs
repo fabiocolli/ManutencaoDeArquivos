@@ -1,5 +1,5 @@
-﻿using DominioManutencaoArquivos.Entidades;
-using DominioManutencaoArquivos.Interface;
+﻿using Dominio.ManutencaoArquivos.Entidades;
+using Dominio.ManutencaoArquivos.Interface;
 using FluentAssertions;
 
 namespace ServicoMantemArquivos.Teste.Dominio

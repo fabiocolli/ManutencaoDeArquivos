@@ -1,4 +1,4 @@
-﻿namespace DominioManutencaoArquivos.Entidades
+﻿namespace Dominio.ManutencaoArquivos.Entidades
 {
     public class Arquivo
     {

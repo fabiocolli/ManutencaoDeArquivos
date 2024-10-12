@@ -1,7 +1,7 @@
-﻿using DominioManutencaoArquivos.Entidades;
-using DominioManutencaoArquivos.Interface;
+﻿using Dominio.ManutencaoArquivos.Entidades;
+using Dominio.ManutencaoArquivos.Interface;
 
-namespace DominioManutencaoArquivos.Servicos
+namespace Dominio.ManutencaoArquivos.Servicos
 {
     public class ServicoDeRegraExclusaoDeArquivo : IRegraExclusaoDeArquivo
     {

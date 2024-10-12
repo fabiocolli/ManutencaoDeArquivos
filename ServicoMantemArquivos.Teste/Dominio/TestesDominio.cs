@@ -1,4 +1,4 @@
-﻿using DominioManutencaoArquivos.Entidades;
+﻿using Dominio.ManutencaoArquivos.Entidades;
 using FluentAssertions;
 
 namespace ServicoMantemArquivos.Teste.Dominio

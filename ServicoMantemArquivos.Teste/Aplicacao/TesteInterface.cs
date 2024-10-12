@@ -1,4 +1,4 @@
-﻿using AplicacaoManutencaoServico.Interfaces;
+﻿using Aplicacao.ManutencaoDeArquivo.Interfaces;
 using FluentAssertions;
 
 namespace ServicoMantemArquivos.Teste.Aplicacao

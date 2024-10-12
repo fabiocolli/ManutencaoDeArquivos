@@ -1,4 +1,4 @@
-﻿namespace AplicacaoManutencaoServico.Interfaces
+﻿namespace Aplicacao.ManutencaoDeArquivo.Interfaces
 {
     public interface IServicoArquivo
     {

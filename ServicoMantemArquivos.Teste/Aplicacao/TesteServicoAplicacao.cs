@@ -1,6 +1,9 @@
-﻿using AplicacaoManutencaoServico.Interfaces;
-using AplicacaoManutencaoServico.Servico;
+﻿using Aplicacao.ManutencaoDeArquivo.Interfaces;
+using Aplicacao.ManutencaoDeArquivo.Servico;
+using Dominio.ManutencaoArquivos.Interface;
 using FluentAssertions;
+using Infraestrutura.ManutencaoArquivos.Interfaces;
+using System.Reflection;
 
 namespace ServicoMantemArquivos.Teste.Aplicacao
 {
@@ -31,6 +34,26 @@ namespace ServicoMantemArquivos.Teste.Aplicacao
 
             // Assertiva
             servico.Should().Contain(interfaceServicoArquivo);
+        }
+
+        [Fact(DisplayName = "A classe de ServicoArquivo deve conter as propriedades IRegraExclusaoDeArquivo, IConfiguracaoService, IServicoArquivoDeSistema")]
+        public void AClasseServicoArquivoDeveConterPropriedadesIRegraExclusaoDeArquivoIConfiguracaoServiceIFileSystemService()
+        {
+            // Arranjo
+            var servicoArquivo = typeof(ServicoArquivo);
+            var propriedadeRegraExclusaoDeArquivo = typeof(IRegraExclusaoDeArquivo);
+            var propriedadeConfiguracaoService = typeof(IServicoDeConfiguracao);
+            var propriedadeServicoArquivoDeSistema = typeof(IServicoArquivoDeSistema);
+
+            // Ação
+            var propriedades = servicoArquivo
+                .GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
+                .Select(p => p.FieldType.Name);
+
+            // Assertiva
+            propriedades.Should().Contain(propriedadeRegraExclusaoDeArquivo.Name);
+            propriedades.Should().Contain(propriedadeConfiguracaoService.Name);
+            propriedades.Should().Contain(propriedadeServicoArquivoDeSistema.Name);
         }
     }
 }
