@@ -29,8 +29,6 @@ namespace ServicoMantemArquivos.Teste.Dominio
         {
             // Arranjo
             var regradeExclusaoArquivo = new RegraExclusaoDeArquivo();
-            //var mockRegraDeExcluisaoDoArquivo = new Mock<IRegraExclusaoDeArquivo>();
-            //mockRegraDeExcluisaoDoArquivo.Setup(regra => regra.MarcarArquivoQuePodeSerExcluido(It.IsAny<Arquivo>(), It.IsAny<int>()));
             var arquivo = new Arquivo("C:\\temp\\arquivo.txt", DateTime.Now.AddDays(-761));
 
             // Ação
