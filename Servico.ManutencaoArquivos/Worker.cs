@@ -28,7 +28,7 @@ namespace Servico.ManutencaoArquivos
                 {
                     _logger.LogInformation("Trabalho rodando em: {time}", DateTimeOffset.Now);
                 }
-                await Task.Delay(100000, stoppingToken);
+                await Task.Delay(1000, stoppingToken);
             }
         }
     }
