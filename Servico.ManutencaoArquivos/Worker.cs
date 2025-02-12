@@ -13,14 +13,14 @@ namespace Servico.ManutencaoArquivos
             _servicoArquivo = servicoArquivo;
         }
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken tokenDeCancelamento)
         {
             var configuration = new ConfigurationBuilder()
                         .SetBasePath(Directory.GetCurrentDirectory())
                         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .Build();
 
-            while (!stoppingToken.IsCancellationRequested)
+            while (!tokenDeCancelamento.IsCancellationRequested)
             {
                 _servicoArquivo.ExcluirArquivosAntigos(configuration);
 
@@ -28,7 +28,12 @@ namespace Servico.ManutencaoArquivos
                 {
                     _logger.LogInformation("Trabalho rodando em: {time}", DateTimeOffset.Now);
                 }
-                await Task.Delay(1000000, stoppingToken);
+
+                var horas = 3;
+
+                var mileSegundos = horas * 60 * 60 * 1000;
+
+                await Task.Delay(mileSegundos, tokenDeCancelamento);
             }
         }
     }

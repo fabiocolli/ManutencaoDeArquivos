@@ -30,7 +30,7 @@ namespace Aplicacao.ManutencaoDeArquivo.Servico
             descLog += $"Configurações obtidas: {configuracoesDoAppSettings}";
 
             var arquivos = _servicoArquivoDeSistema.ObterArquivosDasPastas(configuracoesDoAppSettings);
-            quantidadeDeArquivosExcluidos += arquivos.Count();
+            quantidadeDeArquivosExcluidos += arquivos.Count(a => a.PodeExcluir);
             descLog += $"Arquivos obtidos :{quantidadeDeArquivosExcluidos}";
 
             foreach (var arquivo in arquivos)
